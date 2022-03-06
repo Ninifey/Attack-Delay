@@ -1,0 +1,104 @@
+---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 07.06.20 18:17
+Description: Unexpected error
+
+cpw.mods.fml.relauncher.ReflectionHelper$UnableToAccessFieldException: java.lang.IllegalArgumentException: Can not set float field net.minecraft.client.renderer.EntityRenderer.fovModifierHand to java.lang.Double
+	at cpw.mods.fml.relauncher.ReflectionHelper.setPrivateValue(ReflectionHelper.java:147)
+	at cpw.mods.fml.common.ObfuscationReflectionHelper.setPrivateValue(ObfuscationReflectionHelper.java:91)
+	at ru.indieplay.ariamis.attackdelay.client.PlayerRenderer.updateRenderer(PlayerRenderer.java:144)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2078)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1039)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: Can not set float field net.minecraft.client.renderer.EntityRenderer.fovModifierHand to java.lang.Double
+	at sun.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:167)
+	at sun.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:171)
+	at sun.reflect.UnsafeFloatFieldAccessorImpl.set(UnsafeFloatFieldAccessorImpl.java:106)
+	at java.lang.reflect.Field.set(Field.java:764)
+	at cpw.mods.fml.relauncher.ReflectionHelper.setPrivateValue(ReflectionHelper.java:143)
+	... 14 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at cpw.mods.fml.relauncher.ReflectionHelper.setPrivateValue(ReflectionHelper.java:147)
+	at cpw.mods.fml.common.ObfuscationReflectionHelper.setPrivateValue(ObfuscationReflectionHelper.java:91)
+	at ru.indieplay.ariamis.attackdelay.client.PlayerRenderer.updateRenderer(PlayerRenderer.java:144)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player101'/196, l='MpServer', x=273,22, y=5,62, z=-1196,12]]
+	Chunk stats: MultiplayerChunkCache: 45, 45
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-71,4,-1229), Chunk: (at 9,0,3 in -5,-77; contains blocks -80,0,-1232 to -65,255,-1217), Region: (-1,-3; contains chunks -32,-96 to -1,-65, blocks -512,0,-1536 to -1,255,-1025)
+	Level time: 97740 game time, 106325 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 54 total; [EntitySlime['Slime'/258, l='MpServer', x=196,78, y=4,00, z=-1134,22], EntityXPOrb['Experience Orb'/267, l='MpServer', x=214,13, y=4,13, z=-1277,31], EntityXPOrb['Experience Orb'/268, l='MpServer', x=213,03, y=4,13, z=-1276,50], EntityXPOrb['Experience Orb'/269, l='MpServer', x=213,38, y=4,13, z=-1276,59], EntityXPOrb['Experience Orb'/270, l='MpServer', x=213,47, y=4,13, z=-1275,97], EntityXPOrb['Experience Orb'/271, l='MpServer', x=213,88, y=4,13, z=-1276,22], EntitySlime['Slime'/272, l='MpServer', x=208,44, y=4,00, z=-1273,41], EntitySlime['Slime'/273, l='MpServer', x=350,09, y=4,47, z=-1270,47], EntityXPOrb['Experience Orb'/193, l='MpServer', x=148,25, y=1,13, z=-1162,75], EntityXPOrb['Experience Orb'/194, l='MpServer', x=149,53, y=1,13, z=-1162,28], EntityXPOrb['Experience Orb'/195, l='MpServer', x=148,22, y=4,13, z=-1159,75], EntityXPOrb['Experience Orb'/197, l='MpServer', x=285,94, y=4,22, z=-1195,34], EntityClientPlayerMP['Player101'/196, l='MpServer', x=273,22, y=5,62, z=-1196,12], EntitySlime['Slime'/199, l='MpServer', x=276,91, y=4,00, z=-1203,22], EntityItem['item.item.slimeball'/200, l='MpServer', x=289,44, y=4,13, z=-1196,72], EntitySlime['Slime'/201, l='MpServer', x=283,25, y=4,00, z=-1170,00], EntitySlime['Slime'/202, l='MpServer', x=292,75, y=4,00, z=-1206,31], EntitySlime['Slime'/203, l='MpServer', x=242,72, y=4,00, z=-1193,41], EntitySlime['Slime'/204, l='MpServer', x=248,84, y=4,47, z=-1197,97], EntitySlime['Slime'/205, l='MpServer', x=240,25, y=4,00, z=-1194,28], EntitySlime['Slime'/206, l='MpServer', x=287,41, y=4,00, z=-1217,28], EntitySlime['Slime'/207, l='MpServer', x=311,75, y=4,00, z=-1192,19], EntitySlime['Slime'/208, l='MpServer', x=307,03, y=4,00, z=-1199,28], EntitySlime['Slime'/209, l='MpServer', x=248,91, y=4,00, z=-1208,16], EntitySlime['Slime'/210, l='MpServer', x=268,88, y=4,00, z=-1221,50], EntitySlime['Slime'/211, l='MpServer', x=311,41, y=4,00, z=-1212,63], EntitySlime['Slime'/212, l='MpServer', x=308,84, y=4,75, z=-1176,53], EntitySlime['Slime'/213, l='MpServer', x=268,41, y=5,16, z=-1147,44], EntitySlime['Slime'/214, l='MpServer', x=257,72, y=4,00, z=-1148,59], EntitySlime['Slime'/215, l='MpServer', x=265,25, y=5,16, z=-1141,50], EntitySlime['Slime'/216, l='MpServer', x=225,69, y=4,00, z=-1170,94], EntityXPOrb['Experience Orb'/217, l='MpServer', x=235,81, y=4,13, z=-1210,50], EntitySlime['Slime'/218, l='MpServer', x=320,06, y=4,47, z=-1169,56], EntitySlime['Slime'/219, l='MpServer', x=250,06, y=4,00, z=-1242,25], EntitySlime['Slime'/220, l='MpServer', x=274,00, y=5,22, z=-1124,38], EntityItem['item.item.slimeball'/221, l='MpServer', x=221,88, y=4,13, z=-1214,53], EntitySlime['Slime'/222, l='MpServer', x=340,88, y=4,00, z=-1178,97], EntitySlime['Slime'/223, l='MpServer', x=332,75, y=4,47, z=-1150,16], EntitySlime['Slime'/224, l='MpServer', x=321,94, y=4,09, z=-1150,28], EntitySlime['Slime'/225, l='MpServer', x=243,72, y=4,00, z=-1132,13], EntitySlime['Slime'/226, l='MpServer', x=338,84, y=4,41, z=-1221,56], EntitySlime['Slime'/227, l='MpServer', x=345,59, y=5,22, z=-1160,25], EntitySlime['Slime'/228, l='MpServer', x=238,44, y=4,00, z=-1256,94], EntitySlime['Slime'/229, l='MpServer', x=350,78, y=5,00, z=-1237,16], EntitySlime['Slime'/230, l='MpServer', x=321,13, y=4,00, z=-1121,19], EntitySlime['Slime'/231, l='MpServer', x=322,44, y=4,00, z=-1126,28], EntitySlime['Slime'/232, l='MpServer', x=274,56, y=5,22, z=-1117,66], EntitySlime['Slime'/236, l='MpServer', x=242,84, y=4,00, z=-1264,94], EntitySlime['Slime'/237, l='MpServer', x=314,28, y=4,00, z=-1268,25], EntitySlime['Slime'/238, l='MpServer', x=308,59, y=4,00, z=-1265,13], EntitySlime['Slime'/241, l='MpServer', x=318,22, y=4,00, z=-1117,78], EntitySlime['Slime'/244, l='MpServer', x=220,78, y=5,22, z=-1262,97], EntitySlime['Slime'/246, l='MpServer', x=207,59, y=4,00, z=-1237,75], EntitySlime['Slime'/249, l='MpServer', x=324,47, y=4,41, z=-1117,41]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:991)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_211, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 261007536 bytes (248 MB) / 527958016 bytes (503 MB) up to 1879048192 bytes (1792 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1614} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	attackdelay{Minecraft 1.7.10} [Ariamis attack delay mod] (modid-1.0.jar) 
+	GL info: ' Vendor: 'Intel' Version: '4.6.0 - Build 26.20.100.7262' Renderer: 'Intel(R) HD Graphics 620'
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) HD Graphics 620 GL version 4.6.0 - Build 26.20.100.7262, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

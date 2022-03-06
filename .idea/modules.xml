@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Ariamis-attack-delay.iml" filepath="$PROJECT_DIR$/.idea/Ariamis-attack-delay.iml" group="Ariamis-attack-delay" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ariamis-attack-delay_api.iml" filepath="$PROJECT_DIR$/.idea/modules/Ariamis-attack-delay_api.iml" group="Ariamis-attack-delay" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ariamis-attack-delay_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Ariamis-attack-delay_main.iml" group="Ariamis-attack-delay" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ariamis-attack-delay_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Ariamis-attack-delay_test.iml" group="Ariamis-attack-delay" />
+    </modules>
+  </component>
+</project>

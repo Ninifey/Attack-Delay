@@ -1,0 +1,104 @@
+---- Minecraft Crash Report ----
+// Uh... Did I do that?
+
+Time: 07.06.20 1:22
+Description: Unexpected error
+
+cpw.mods.fml.relauncher.ReflectionHelper$UnableToAccessFieldException: java.lang.IllegalArgumentException: Can not set float field net.minecraft.client.renderer.EntityRenderer.fovModifierHand to java.lang.Double
+	at cpw.mods.fml.relauncher.ReflectionHelper.setPrivateValue(ReflectionHelper.java:147)
+	at cpw.mods.fml.common.ObfuscationReflectionHelper.setPrivateValue(ObfuscationReflectionHelper.java:91)
+	at ru.indieplay.ariamis.attackdelay.client.PlayerRenderer.updateRenderer(PlayerRenderer.java:100)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2078)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1039)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: Can not set float field net.minecraft.client.renderer.EntityRenderer.fovModifierHand to java.lang.Double
+	at sun.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:167)
+	at sun.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:171)
+	at sun.reflect.UnsafeFloatFieldAccessorImpl.set(UnsafeFloatFieldAccessorImpl.java:106)
+	at java.lang.reflect.Field.set(Field.java:764)
+	at cpw.mods.fml.relauncher.ReflectionHelper.setPrivateValue(ReflectionHelper.java:143)
+	... 14 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at cpw.mods.fml.relauncher.ReflectionHelper.setPrivateValue(ReflectionHelper.java:147)
+	at cpw.mods.fml.common.ObfuscationReflectionHelper.setPrivateValue(ObfuscationReflectionHelper.java:91)
+	at ru.indieplay.ariamis.attackdelay.client.PlayerRenderer.updateRenderer(PlayerRenderer.java:100)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player829'/229, l='MpServer', x=-120,79, y=5,62, z=-1238,32]]
+	Chunk stats: MultiplayerChunkCache: 125, 125
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-71,4,-1229), Chunk: (at 9,0,3 in -5,-77; contains blocks -80,0,-1232 to -65,255,-1217), Region: (-1,-3; contains chunks -32,-96 to -1,-65, blocks -512,0,-1536 to -1,255,-1025)
+	Level time: 90935 game time, 99520 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 73 total; [EntityChicken['Chicken'/5, l='MpServer', x=-194,44, y=4,00, z=-1288,47], EntitySheep['Sheep'/6, l='MpServer', x=-200,69, y=4,00, z=-1268,81], EntitySheep['Sheep'/8, l='MpServer', x=-185,03, y=4,00, z=-1299,06], EntitySheep['Sheep'/9, l='MpServer', x=-186,03, y=4,00, z=-1303,03], EntitySheep['Sheep'/10, l='MpServer', x=-183,16, y=4,00, z=-1289,91], EntitySheep['Sheep'/11, l='MpServer', x=-186,13, y=4,00, z=-1280,94], EntityHorse['Donkey'/12, l='MpServer', x=-178,97, y=4,00, z=-1267,88], EntityHorse['Horse'/13, l='MpServer', x=-188,50, y=4,00, z=-1265,72], EntityHorse['Horse'/14, l='MpServer', x=-188,41, y=4,00, z=-1260,97], EntitySheep['Sheep'/15, l='MpServer', x=-187,25, y=4,00, z=-1253,44], EntitySlime['Slime'/16, l='MpServer', x=-176,31, y=4,00, z=-1262,69], EntitySheep['Sheep'/17, l='MpServer', x=-186,63, y=4,00, z=-1245,75], EntityChicken['Chicken'/18, l='MpServer', x=-184,44, y=4,00, z=-1230,63], EntitySlime['Slime'/19, l='MpServer', x=-188,69, y=4,00, z=-1217,13], EntityCow['Cow'/20, l='MpServer', x=-179,72, y=4,00, z=-1190,31], EntitySheep['Sheep'/23, l='MpServer', x=-168,22, y=4,00, z=-1283,44], EntityHorse['Donkey'/24, l='MpServer', x=-165,13, y=4,00, z=-1272,06], EntityHorse['Horse'/25, l='MpServer', x=-161,00, y=4,00, z=-1264,78], EntitySheep['Sheep'/26, l='MpServer', x=-169,78, y=4,00, z=-1257,88], EntitySheep['Sheep'/27, l='MpServer', x=-161,72, y=4,00, z=-1251,19], EntityChicken['Chicken'/28, l='MpServer', x=-172,56, y=4,00, z=-1240,53], EntityChicken['Chicken'/29, l='MpServer', x=-173,59, y=4,00, z=-1236,38], EntityChicken['Chicken'/30, l='MpServer', x=-175,59, y=4,00, z=-1237,44], EntitySlime['Slime'/31, l='MpServer', x=-172,16, y=5,00, z=-1186,13], EntitySheep['Sheep'/32, l='MpServer', x=-168,75, y=4,00, z=-1174,69], EntitySheep['Sheep'/33, l='MpServer', x=-169,16, y=4,00, z=-1176,22], EntitySheep['Sheep'/38, l='MpServer', x=-144,34, y=4,00, z=-1282,84], EntityHorse['Horse'/39, l='MpServer', x=-148,19, y=4,00, z=-1260,59], EntitySheep['Sheep'/40, l='MpServer', x=-158,16, y=4,00, z=-1240,19], EntityCow['Cow'/41, l='MpServer', x=-156,06, y=4,00, z=-1213,97], EntityCow['Cow'/42, l='MpServer', x=-151,81, y=4,00, z=-1206,13], EntityCow['Cow'/43, l='MpServer', x=-155,72, y=4,00, z=-1199,88], EntitySlime['Slime'/44, l='MpServer', x=-152,25, y=4,00, z=-1189,97], EntityCow['Cow'/45, l='MpServer', x=-157,44, y=4,00, z=-1171,16], EntitySlime['Slime'/46, l='MpServer', x=-157,75, y=4,00, z=-1173,91], EntitySheep['Sheep'/49, l='MpServer', x=-140,13, y=4,00, z=-1284,16], EntitySheep['Sheep'/50, l='MpServer', x=-143,78, y=4,00, z=-1276,84], EntityHorse['Horse'/51, l='MpServer', x=-142,16, y=4,00, z=-1256,22], EntityHorse['Horse'/52, l='MpServer', x=-132,66, y=4,00, z=-1249,84], EntityHorse['Horse'/53, l='MpServer', x=-141,81, y=4,00, z=-1234,72], EntityHorse['Horse'/54, l='MpServer', x=-141,13, y=4,00, z=-1241,88], EntityHorse['Horse'/55, l='MpServer', x=-139,50, y=4,00, z=-1230,06], EntityHorse['Horse'/56, l='MpServer', x=-143,81, y=4,00, z=-1228,53], EntitySheep['Sheep'/57, l='MpServer', x=-139,91, y=4,00, z=-1216,91], EntityChicken['Chicken'/58, l='MpServer', x=-139,34, y=4,00, z=-1227,59], EntityChicken['Chicken'/61, l='MpServer', x=-124,53, y=4,00, z=-1282,44], EntityChicken['Chicken'/62, l='MpServer', x=-113,47, y=4,00, z=-1281,47], EntitySheep['Sheep'/63, l='MpServer', x=-115,13, y=4,00, z=-1267,16], EntityItem['item.tile.cloth.white'/64, l='MpServer', x=-116,38, y=4,13, z=-1252,91], EntityChicken['Chicken'/65, l='MpServer', x=-120,09, y=4,00, z=-1241,13], EntityHorse['Horse'/66, l='MpServer', x=-118,00, y=4,00, z=-1222,84], EntityChicken['Chicken'/67, l='MpServer', x=-119,09, y=4,00, z=-1234,91], EntityCow['Cow'/68, l='MpServer', x=-119,78, y=4,00, z=-1202,31], EntityCow['Cow'/69, l='MpServer', x=-121,47, y=4,00, z=-1212,94], EntitySlime['Slime'/70, l='MpServer', x=-122,50, y=4,47, z=-1212,00], EntitySheep['Sheep'/72, l='MpServer', x=-108,97, y=4,00, z=-1288,03], EntitySheep['Sheep'/73, l='MpServer', x=-101,91, y=4,00, z=-1269,91], EntitySheep['Sheep'/74, l='MpServer', x=-99,16, y=4,00, z=-1277,72], EntityChicken['Chicken'/75, l='MpServer', x=-110,56, y=4,00, z=-1226,66], EntitySheep['Sheep'/76, l='MpServer', x=-105,81, y=4,00, z=-1230,66], EntitySheep['Sheep'/77, l='MpServer', x=-88,94, y=4,00, z=-1274,06], EntityHorse['Horse'/78, l='MpServer', x=-82,78, y=4,00, z=-1186,47], EntityChicken['Chicken'/79, l='MpServer', x=-94,38, y=4,00, z=-1172,59], EntityPig['Pig'/80, l='MpServer', x=-80,16, y=4,00, z=-1163,72], EntitySlime['Slime'/83, l='MpServer', x=-63,22, y=4,78, z=-1264,03], EntitySlime['Slime'/84, l='MpServer', x=-71,41, y=4,00, z=-1196,41], EntitySlime['Slime'/85, l='MpServer', x=-75,00, y=4,78, z=-1187,00], EntityPig['Pig'/86, l='MpServer', x=-69,50, y=4,00, z=-1173,41], EntitySlime['Slime'/93, l='MpServer', x=-60,16, y=4,00, z=-1230,44], EntitySlime['Slime'/94, l='MpServer', x=-49,19, y=4,00, z=-1204,03], EntitySlime['Slime'/99, l='MpServer', x=-46,72, y=4,00, z=-1299,69], EntityChicken['Chicken'/101, l='MpServer', x=-43,59, y=4,00, z=-1259,72], EntityClientPlayerMP['Player829'/229, l='MpServer', x=-120,79, y=5,62, z=-1238,32]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:991)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_211, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 241508016 bytes (230 MB) / 575143936 bytes (548 MB) up to 1879048192 bytes (1792 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1614} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	attackdelay{Minecraft 1.7.10} [Ariamis attack delay mod] (modid-1.0.jar) 
+	GL info: ' Vendor: 'Intel' Version: '4.6.0 - Build 26.20.100.7262' Renderer: 'Intel(R) HD Graphics 620'
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) HD Graphics 620 GL version 4.6.0 - Build 26.20.100.7262, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

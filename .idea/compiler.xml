@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Ariamis-attack-delay" target="1.6" />
+      <module name="Ariamis-attack-delay_api" target="1.6" />
+      <module name="Ariamis-attack-delay_main" target="1.6" />
+      <module name="Ariamis-attack-delay_test" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

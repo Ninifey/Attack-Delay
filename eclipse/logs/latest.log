@@ -1,0 +1,38 @@
+[19:47:49] [main/INFO]: Setting user: Player627
+[19:47:51] [Client thread/INFO]: LWJGL Version: 2.9.1
+[19:48:00] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Ariamis attack delay mod
+[19:48:01] [Sound Library Loader/INFO]: Sound engine started
+[19:48:02] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[19:48:02] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[19:48:02] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Ariamis attack delay mod
+[19:48:02] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[19:48:02] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[19:48:03] [Sound Library Loader/INFO]: Sound engine started
+[19:53:12] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[19:53:12] [Server thread/INFO]: Generating keypair
+[19:53:12] [Server thread/INFO]: Preparing start region for level 0
+[19:53:13] [Server thread/INFO]: Changing view distance to 2, from 10
+[19:53:13] [Server thread/INFO]: Player627[local:E:fe9d2f7c] logged in with entity id 327 at (-86.48507492419519, 15.0, -1212.709921296405)
+[19:53:13] [Server thread/INFO]: Player627 joined the game
+[19:53:21] [Client thread/INFO]: [CHAT] Value of general net.minecraft.item.ItemSword set to 0,200000 successfully
+[19:53:21] [Client thread/INFO]: [CHAT] debug: command a|s|.2
+[19:53:27] [Client thread/INFO]: [CHAT] Value of range net.minecraft.item.ItemSword set to 5,000000 successfully
+[19:53:27] [Client thread/INFO]: [CHAT] debug: command a|r|5
+[19:53:29] [Client thread/INFO]: [CHAT] debug: command reload
+[19:53:35] [Server thread/INFO]: [Player627: Set own game mode to Creative Mode]
+[19:53:35] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[19:53:37] [Server thread/INFO]: [Player627: Set own game mode to Survival Mode]
+[19:53:37] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[19:53:39] [Server thread/INFO]: Player627 has just earned the achievement [Taking Inventory]
+[19:53:39] [Client thread/INFO]: [CHAT] Player627 has just earned the achievement [Taking Inventory]
+[19:53:50] [Server thread/INFO]: Saving and pausing game...
+[19:53:50] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[19:53:50] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[19:53:50] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[19:53:51] [Server thread/INFO]: Stopping server
+[19:53:51] [Server thread/INFO]: Saving players
+[19:53:51] [Server thread/INFO]: Saving worlds
+[19:53:51] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[19:53:51] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[19:53:51] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[19:53:51] [Client thread/INFO]: Stopping!
